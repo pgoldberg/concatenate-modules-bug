@@ -1,0 +1,16 @@
+{
+  "name": "webpack-bug-concatenate-modules",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "workspaces": [
+    "packages/**"
+  ],
+  "scripts": {
+    "start": "yarn install && yarn webpack"
+  },
+  "dependencies": {
+    "webpack": "5.72.1",
+    "webpack-cli": "4.9.2"
+  }
+}
