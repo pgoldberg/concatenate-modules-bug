@@ -1,5 +1,7 @@
 # Webpack bug with `optimization.concatenateModules`
 
+https://github.com/rdsedmundo/webpack-bug-concatenate-modules used as a template for this repro
+
 More info here: https://github.com/webpack/webpack/discussions/15844
 
 It seems that something about this style of re-exporting causes issues with webpack's concatenated module ordering. In `dep/inner_dep` and `dep/inner_dep2` we `export *` from each module in `index.js`, and then in `dep/index.js`, we `import *` and then re-export those imports. That seems to cause issues with concatenated module ordering in webpack.
